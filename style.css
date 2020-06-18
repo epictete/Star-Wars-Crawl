@@ -1,14 +1,20 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     overflow: hidden;
-    background: black;
+    background-image: linear-gradient(black, black);
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: #ffbe00;
     animation: stars 1s forwards 4s;
 }
 
 @keyframes stars {
-    0% {background: black;}
-    100% {background: url(img/star-wars-backgrounds-25.jpg);}
+    0% {background-image: linear-gradient(black, black);}
+    100% {background-image: url(img/star-wars-backgrounds-25.jpg);}
 }
 
 .intro {
@@ -17,15 +23,14 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%;
+    top: 50vh;
     margin: auto;
     color: #00737E;
-    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 300%;
     font-weight: 300;
     letter-spacing: 1px;
     line-height: 150%;
-    animation: intro 1s forwards 4s;
+    animation: intro 1s forwards 3s;
 }
 
 @keyframes intro {
@@ -39,11 +44,12 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 15%;
+    top: 15vh;
     margin: auto;
     opacity: 0;
+    z-index: 2;
     transform: scale(1.5);
-    animation: fade-in 1s forwards 4s, zoom 10s linear 5s forwards, fade-out 1s linear 15s forwards;
+    animation: fade-in 1s forwards 5s, zoom 8s linear 5s forwards, fade-out 1s linear 12s forwards;
 }
 
 @keyframes fade-in {
@@ -65,7 +71,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 50vh;
-    top: -25px;
+    top: -50px;
     background-image: linear-gradient(0deg, transparent, black 75%);
     z-index: 1;
 }
@@ -75,8 +81,6 @@ body {
     justify-content: center;
     height: 800px;
     perspective: 400px;
-    color: #F9B000;
-    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 500%;
     font-weight: 600;
     letter-spacing: 6px;
@@ -87,8 +91,8 @@ body {
 .crawl {
     position: relative;
     top: 9999px;
-    transform-origin: 50% 100%;
-    animation: crawl 60s linear 13s;
+    transform-origin: bottom;
+    animation: crawl 50s linear 13s;
 }
 
 @keyframes crawl {
@@ -102,7 +106,6 @@ body {
 }
 
 .title h1 {
-    margin-top: 50px;
-    margin-bottom: 200px;
+    margin: 50px 0 100px;
     text-transform: uppercase;
 }
