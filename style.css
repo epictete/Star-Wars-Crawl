@@ -9,7 +9,7 @@ body {
     background-image: linear-gradient(black, black);
     font-family: 'Pathway Gothic One', sans-serif;
     color: #ffbe00;
-    animation: stars 1s forwards 4s;
+    animation: stars 1s forwards 5s;
 }
 
 @keyframes stars {
@@ -44,12 +44,12 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 15vh;
+    top: 0;
+    bottom: 0;
     margin: auto;
     opacity: 0;
     z-index: 2;
-    transform: scale(1.5);
-    animation: fade-in 1s forwards 5s, zoom 8s linear 5s forwards, fade-out 1s linear 12s forwards;
+    animation: fade-in 1s forwards 5s, zoom 10s ease-out 5s forwards, fade-out 1s linear 14s forwards;
 }
 
 @keyframes fade-in {
@@ -58,7 +58,7 @@ body {
 }
 
 @keyframes zoom {
-    0% {transform: scale(1.5, 1.5);}
+    0% {transform: scale(3, 3);}
     100% {transform: scale(0.1, 0.1);}
 }
 
@@ -92,11 +92,11 @@ body {
     position: relative;
     top: 9999px;
     transform-origin: bottom;
-    animation: crawl 50s linear 13s;
+    animation: crawl 50s linear 15s;
 }
 
 @keyframes crawl {
-    0% {top: 0; transform: rotateX(20deg) translateZ(0);}
+    0% {top: 300px; transform: rotateX(25deg) translateZ(0);}
     100% {top: -6000px;transform: rotateX(25deg) translateZ(-2500px);}
 }
 
