@@ -1,10 +1,6 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     overflow: hidden;
     background-image: linear-gradient(black, black);
     font-family: 'Pathway Gothic One', sans-serif;
@@ -92,7 +88,7 @@ body {
     position: relative;
     top: 9999px;
     transform-origin: bottom;
-    animation: crawl 50s linear 15s;
+    animation: crawl 50s linear 13s;
 }
 
 @keyframes crawl {
@@ -106,6 +102,10 @@ body {
 }
 
 .title h1 {
-    margin: 50px 0 100px;
+    margin: 100px 0 200px;
     text-transform: uppercase;
+}
+
+.crawl p {
+    margin-bottom: 100px;
 }
